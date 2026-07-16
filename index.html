@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+
+        <label for="length">Tamanho: <span id="lengthValue">12</span></label>
+        <input type="range" id="length" min="4" max="32" value="12">
+
+        <div class="options">
+            <label class="checkbox">
+                <input type="checkbox" id="uppercase" checked>
+                Letras maiúsculas (A-Z)
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="lowercase" checked>
+                Letras minúsculas (a-z)
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="numbers" checked>
+                Números (0-9)
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" id="symbols" checked>
+                Símbolos (!@#$%&*)
+            </label>
+        </div>
+
+        <button id="generateBtn">Gerar Senha</button>
+
+        <div class="result">
+            <input type="text" id="password" readonly>
+            <button id="toggleVisibility" title="Mostrar/ocultar senha">👁</button>
+            <button id="copyBtn">Copiar</button>
+        </div>
+
+        <div class="strength">
+            <div class="strength-bar">
+                <div id="strengthFill" class="strength-fill"></div>
+            </div>
+            <span id="strengthLabel">—</span>
+        </div>
+
+        <p id="errorMsg" class="error-msg"></p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
